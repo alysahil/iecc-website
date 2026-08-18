@@ -3,23 +3,23 @@
 
 /* --- Root Variables --- */
 :root {
-  --color-navy: #0b2c5c;
-  --color-navy-light: #163f78;
-  --color-navy-dark: #061730;
-  --color-maroon: #808080;
-  --color-maroon-hover: #686868;
+  --color-navy: #163f78; /* Rich Steel Blue */
+  --color-navy-light: #20579e;
+  --color-navy-dark: #0a0b0d; /* Ultra Dark Grey */
+  --color-maroon: #cc2929; /* Crimson Red */
+  --color-maroon-hover: #e03c3c;
   
-  --bg-primary: #F8FAFC;
-  --bg-secondary: #FFFFFF;
-  --bg-glass: rgba(255, 255, 255, 0.85);
-  --border-glass: rgba(11, 44, 92, 0.08);
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
+  --bg-primary: #121316; /* Charcoal / Dark Grey */
+  --bg-secondary: #1c1d22; /* Slightly lighter Charcoal */
+  --bg-glass: rgba(28, 29, 34, 0.75); /* Dark Glassmorphism */
+  --border-glass: rgba(255, 255, 255, 0.08); /* White transparency border */
+  --text-primary: #F3F4F6; /* Clean off-white text */
+  --text-secondary: #9CA3AF; /* Light muted grey text */
   
   /* Brand Gradients */
   --gradient-brand: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 50%, var(--color-maroon) 100%);
-  --gradient-text: linear-gradient(135deg, var(--color-navy-dark) 30%, var(--color-navy) 100%);
-  --gradient-glow: linear-gradient(135deg, rgba(11, 44, 92, 0.03) 0%, rgba(128, 128, 128, 0.03) 100%);
+  --gradient-text: linear-gradient(135deg, #FFFFFF 30%, #D1D5DB 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(22, 63, 120, 0.06) 0%, rgba(204, 41, 41, 0.06) 100%);
   
   /* Transitions */
   --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -192,6 +192,15 @@ a {
   width: 120px;
   height: 52px;
   display: block;
+}
+
+.logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
 .logo-navy-part {
@@ -1206,8 +1215,8 @@ a {
   width: 100%;
   padding: 1rem 1.25rem;
   border-radius: 12px;
-  border: 1px solid rgba(11, 44, 92, 0.15);
-  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.02);
   outline: none;
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
@@ -1217,7 +1226,8 @@ a {
 
 .form-input:focus {
   border-color: var(--color-navy);
-  box-shadow: 0 0 0 3px rgba(11, 44, 92, 0.08);
+  box-shadow: 0 0 0 3px rgba(31, 78, 121, 0.15);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 textarea.form-input {
