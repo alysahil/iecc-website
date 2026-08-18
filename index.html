@@ -8,13 +8,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="floating-blob blob-1"></div>
+  <div class="floating-blob blob-2"></div>
+  <div class="floating-blob blob-3"></div>
 
   <!-- --- Header / Navigation --- -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#hero" class="logo" style="display: flex; align-items: center; gap: 0.8rem;">
         <svg class="logo-svg" viewBox="0 0 135 60" xmlns="http://www.w3.org/2000/svg">
-          <rect class="logo-navy-part" x="10" y="10" width="12" height="40" rx="1.5"/>
+          <rect class="logo-navy-part" x="10" y="10" width="12" height="16" rx="1"/>
+          <rect class="logo-maroon-part" x="10" y="26" width="12" height="8"/>
+          <rect class="logo-navy-part" x="10" y="34" width="12" height="16" rx="1"/>
           <path class="logo-navy-part" d="M 32,10 H 56 V 18 H 42 V 26 H 54 V 34 H 42 V 42 H 56 V 50 H 32 Z"/>
           <rect class="logo-maroon-part" x="42" y="26" width="12" height="8"/>
           <path class="logo-navy-part" d="M 88,10 H 68 C 62,10 58,14 58,20 V 40 C 58,46 62,50 68,50 H 88 V 42 H 68 V 18 H 88 Z"/>
@@ -95,43 +100,50 @@
       </div>
 
       <div class="services-tabs-container">
-        <button class="tab-btn active" data-tab="peb">PEB & Warehouses</button>
+        <button class="tab-btn active" data-tab="construction">Construction & Civil</button>
         <button class="tab-btn" data-tab="components">Building Components</button>
-        <button class="tab-btn" data-tab="cnc">Precision CNC & Cutting</button>
         <button class="tab-btn" data-tab="infra">Infrastructure & Security</button>
-        <button class="tab-btn" data-tab="construction">Construction & Civil</button>
       </div>
 
       <div class="services-grid" id="services-grid">
         <!-- Dynamic Cards are injected by JS based on selection -->
         <div class="service-card">
-          <div class="service-icon">🏗️</div>
-          <h3>Pre-Engineered Buildings</h3>
-          <p>Complete turnkey solutions from architectural concept and engineering design to fabrication, transport, and on-site erection.</p>
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="Civil & Structural Concrete">
+          </div>
+          <div class="service-icon">🧱</div>
+          <h3>Civil & Structural Concrete</h3>
+          <p>Heavy foundations, concrete plinths, machinery bases, and structural reinforced concrete frames engineered for heavy loading.</p>
           <ul class="service-features-list">
-            <li>Turnkey Warehouse Construction</li>
-            <li>Multi-Story Pre-fabricated Offices</li>
-            <li>Agricultural Sheds & Aviation Hangars</li>
+            <li>High-Strength Concrete Mixes</li>
+            <li>Seismic-Compliant Foundation Plinths</li>
+            <li>In-house Concrete Lab Inspection</li>
           </ul>
         </div>
         <div class="service-card">
-          <div class="service-icon">⚡</div>
-          <h3>Advanced Engineering</h3>
-          <p>Using industry leading software (STAAD Pro, Tekla, MBS) for highly optimized structural steel layouts conforming to AISC codes.</p>
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Commercial & Turnkey Buildings">
+          </div>
+          <div class="service-icon">🏢</div>
+          <h3>Commercial & Turnkey Buildings</h3>
+          <p>Fast-track, turnkey construction of corporate office blocks, commercial showrooms, retail centers, and multi-story structural layouts.</p>
           <ul class="service-features-list">
-            <li>Earthquake Resistant Analysis</li>
-            <li>Optimized Weight Distributions</li>
-            <li>Custom Detailing Packages</li>
+            <li>Integrated MEP Design</li>
+            <li>Optimized Construction Timelines</li>
+            <li>Premium Grade Quality Finishing</li>
           </ul>
         </div>
         <div class="service-card">
-          <div class="service-icon">🛡️</div>
-          <h3>Quality Manufacturing</h3>
-          <p>State-of-the-art facilities utilizing premium grade ASTM 572M steel and AWS D1.1-compliant structural welds.</p>
+          <div class="service-card-img">
+            <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=800&q=80" alt="Industrial Plant Commissioning">
+          </div>
+          <div class="service-icon">🏭</div>
+          <h3>Industrial Plant Commissioning</h3>
+          <p>Full-scale structural erection, machinery foundation works, heavy plant rigging, industrial pipe fitting, and structural commissioning.</p>
           <ul class="service-features-list">
-            <li>MBMA, AISC & IS Compliant</li>
-            <li>Ultrasonic Weld Inspections</li>
-            <li>Anti-Corrosive Epoxy Coatings</li>
+            <li>Certified Heavy Lift Planning</li>
+            <li>AWS/ASME Welding Certification</li>
+            <li>Rigorous Safety Compliance (OSHA)</li>
           </ul>
         </div>
       </div>
@@ -388,106 +400,46 @@
       </div>
 
       <div class="contact-layout">
-        <!-- 3D Business Card Presentation -->
-        <div style="display: flex; flex-direction: column; gap: 1.5rem; align-items: center;">
-          <div class="card-container" id="business-card">
-            <div class="card-inner" id="card-inner">
-              
-              <!-- Card FRONT -->
-              <div class="card-face card-front">
-                <div class="card-logo-area">
-                  <svg class="logo-svg" viewBox="0 0 135 60" xmlns="http://www.w3.org/2000/svg">
-                    <rect class="logo-navy-part" x="10" y="10" width="12" height="40" rx="1.5"/>
-                    <path class="logo-navy-part" d="M 32,10 H 56 V 18 H 42 V 26 H 54 V 34 H 42 V 42 H 56 V 50 H 32 Z"/>
-                    <rect class="logo-maroon-part" x="42" y="26" width="12" height="8"/>
-                    <path class="logo-navy-part" d="M 88,10 H 68 C 62,10 58,14 58,20 V 40 C 58,46 62,50 68,50 H 88 V 42 H 68 V 18 H 88 Z"/>
-                    <path class="logo-maroon-part" d="M 84,42 H 88 V 50 H 84 Z"/>
-                    <path class="logo-maroon-part" d="M 84,10 H 88 V 18 H 84 Z"/>
-                    <path class="logo-navy-part" d="M 122,10 H 102 C 96,10 92,14 92,20 V 40 C 92,46 96,50 102,50 H 122 V 42 H 102 V 18 H 122 Z"/>
-                    <path class="logo-maroon-part" d="M 118,42 H 122 V 50 H 118 Z"/>
-                    <path class="logo-maroon-part" d="M 118,10 H 122 V 18 H 118 Z"/>
-                  </svg>
-                  <span class="card-brand-sub">INDIAN ENGINEERING &amp;<br>CONSTRUCTION COMPANY</span>
-                </div>
-                <div class="card-separator"></div>
-                <div class="card-info-area">
-                  <h3 class="card-name">BELAL AHMAD</h3>
-                  <span class="card-title">CEO</span>
-                  <div class="card-contact-lines">
-                    <div class="card-contact-line">
-                      <div class="card-icon-circle">📞</div>
-                      <span>+91-9897947864</span>
-                    </div>
-                    <div class="card-contact-line">
-                      <div class="card-icon-circle">✉️</div>
-                      <span>business@iecc.co.in</span>
-                    </div>
-                    <div class="card-contact-line">
-                      <div class="card-icon-circle">🌐</div>
-                      <span>www.iecc.co.in</span>
-                    </div>
-                  </div>
-                </div>
+        <!-- Contact Information Panel -->
+        <div class="contact-info-panel" style="display: flex; flex-direction: column; gap: 2.2rem; background: var(--bg-glass); border: 1px solid var(--border-glass); padding: 3rem; border-radius: 24px; box-shadow: 0 10px 30px rgba(11, 44, 92, 0.03); position: relative; transition: var(--transition-smooth); width: 100%; max-width: 440px; margin: 0 auto;">
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <h3 style="font-size: 2rem; color: var(--color-navy-dark); font-family: 'Outfit', sans-serif;">Corporate Office</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">Indian Engineering &amp; Construction Company</p>
+          </div>
+          
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div style="display: flex; align-items: flex-start; gap: 1.2rem;">
+              <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(11, 44, 92, 0.05); display: flex; align-items: center; justify-content: center; color: var(--color-navy); font-size: 1.25rem; flex-shrink: 0;">📍</div>
+              <div>
+                <h4 style="font-size: 1.05rem; color: var(--color-navy-dark); font-weight: 600; margin-bottom: 0.25rem;">Address</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">Levana Cyber Heights, 10th floor, TCG 2,5, Vibhuti Khand, Gomti Nagar, Lucknow (U.P.)</p>
               </div>
-              
-              <!-- Card BACK -->
-              <div class="card-face card-back">
-                <div class="card-back-left">
-                  <div class="card-back-left-content">
-                    <svg class="logo-svg logo-light" viewBox="0 0 135 60" xmlns="http://www.w3.org/2000/svg">
-                      <rect class="logo-navy-part" x="10" y="10" width="12" height="40" rx="1.5"/>
-                      <path class="logo-navy-part" d="M 32,10 H 56 V 18 H 42 V 26 H 54 V 34 H 42 V 42 H 56 V 50 H 32 Z"/>
-                      <rect class="logo-maroon-part" x="42" y="26" width="12" height="8"/>
-                      <path class="logo-navy-part" d="M 88,10 H 68 C 62,10 58,14 58,20 V 40 C 58,46 62,50 68,50 H 88 V 42 H 68 V 18 H 88 Z"/>
-                      <path class="logo-maroon-part" d="M 84,42 H 88 V 50 H 84 Z"/>
-                      <path class="logo-maroon-part" d="M 84,10 H 88 V 18 H 84 Z"/>
-                      <path class="logo-navy-part" d="M 122,10 H 102 C 96,10 92,14 92,20 V 40 C 92,46 96,50 102,50 H 122 V 42 H 102 V 18 H 122 Z"/>
-                      <path class="logo-maroon-part" d="M 118,42 H 122 V 50 H 118 Z"/>
-                      <path class="logo-maroon-part" d="M 118,10 H 122 V 18 H 118 Z"/>
-                    </svg>
-                    <span class="card-brand-sub">INDIAN ENGINEERING &amp;<br>CONSTRUCTION COMPANY</span>
-                  </div>
-                </div>
-                <div class="card-back-right">
-                  <div class="card-address-block">
-                    <div class="card-address-item">
-                      <div class="card-icon-circle">📍</div>
-                      <div>
-                        <div class="card-address-label">ADDRESS</div>
-                        <div class="card-address-desc">Levana Cyber Heights, 10th floor, TCG 2,5, Vibhuti Khand, Gomti Nagar, Lucknow (U.P.)</div>
-                      </div>
-                    </div>
-                    <div class="card-address-item">
-                      <div class="card-icon-circle">📞</div>
-                      <div>
-                        <div class="card-address-label">PHONE</div>
-                        <div class="card-address-desc">+91-9897947864</div>
-                      </div>
-                    </div>
-                    <div class="card-address-item">
-                      <div class="card-icon-circle">✉️</div>
-                      <div>
-                        <div class="card-address-label">EMAIL</div>
-                        <div class="card-address-desc">business@iecc.co.in</div>
-                      </div>
-                    </div>
-                    <div class="card-address-item">
-                      <div class="card-icon-circle">🌐</div>
-                      <div>
-                        <div class="card-address-label">WEBSITE</div>
-                        <div class="card-address-desc">www.iecc.co.in</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </div>
 
+            <div style="display: flex; align-items: flex-start; gap: 1.2rem;">
+              <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(11, 44, 92, 0.05); display: flex; align-items: center; justify-content: center; color: var(--color-navy); font-size: 1.25rem; flex-shrink: 0;">📞</div>
+              <div>
+                <h4 style="font-size: 1.05rem; color: var(--color-navy-dark); font-weight: 600; margin-bottom: 0.25rem;">Phone Number</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;">+91-9897947864</p>
               </div>
+            </div>
 
+            <div style="display: flex; align-items: flex-start; gap: 1.2rem;">
+              <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(11, 44, 92, 0.05); display: flex; align-items: center; justify-content: center; color: var(--color-navy); font-size: 1.25rem; flex-shrink: 0;">✉️</div>
+              <div>
+                <h4 style="font-size: 1.05rem; color: var(--color-navy-dark); font-weight: 600; margin-bottom: 0.25rem;">Email Address</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;"><a href="mailto:business@iecc.co.in" style="color: var(--color-maroon); font-weight: 500;">business@iecc.co.in</a></p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 1.2rem;">
+              <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(11, 44, 92, 0.05); display: flex; align-items: center; justify-content: center; color: var(--color-navy); font-size: 1.25rem; flex-shrink: 0;">🌐</div>
+              <div>
+                <h4 style="font-size: 1.05rem; color: var(--color-navy-dark); font-weight: 600; margin-bottom: 0.25rem;">Website</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.5;"><a href="https://www.iecc.co.in" target="_blank" style="color: var(--color-navy); font-weight: 500;">www.iecc.co.in</a></p>
+              </div>
             </div>
           </div>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); text-align: center; max-width: 320px; font-style: italic;">
-            * Click the business card to interactively flip between Front and Back.
-          </p>
         </div>
 
         <!-- Contact Form -->
@@ -529,7 +481,9 @@
         <div class="footer-brand">
           <a href="#hero" class="logo" style="display: flex; align-items: center; gap: 0.8rem;">
             <svg class="logo-svg logo-light" viewBox="0 0 135 60" xmlns="http://www.w3.org/2000/svg">
-              <rect class="logo-navy-part" x="10" y="10" width="12" height="40" rx="1.5"/>
+              <rect class="logo-navy-part" x="10" y="10" width="12" height="16" rx="1"/>
+              <rect class="logo-maroon-part" x="10" y="26" width="12" height="8"/>
+              <rect class="logo-navy-part" x="10" y="34" width="12" height="16" rx="1"/>
               <path class="logo-navy-part" d="M 32,10 H 56 V 18 H 42 V 26 H 54 V 34 H 42 V 42 H 56 V 50 H 32 Z"/>
               <rect class="logo-maroon-part" x="42" y="26" width="12" height="8"/>
               <path class="logo-navy-part" d="M 88,10 H 68 C 62,10 58,14 58,20 V 40 C 58,46 62,50 68,50 H 88 V 42 H 68 V 18 H 88 Z"/>

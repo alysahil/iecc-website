@@ -1,28 +1,5 @@
 // --- Dynamic Services Dataset ---
 const servicesData = {
-  peb: [
-    {
-      icon: "🏗️",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
-      title: "Turnkey PEB Warehouses",
-      desc: "End-to-end design, fabrication, and installation of spacious pre-engineered warehouses and industrial storage buildings.",
-      features: ["Custom Span Clearances", "High Seismic Safety", "Energy-Efficient Insulations"]
-    },
-    {
-      icon: "🏢",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-      title: "Commercial Complexes",
-      desc: "Architecturally striking and highly functional multi-story steel complexes designed for office buildings, showrooms, and retail centers.",
-      features: ["Quick Assembly Timelines", "Flexible Floor Layouts", "AISC Code Compliance"]
-    },
-    {
-      icon: "✈️",
-      image: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80",
-      title: "Aviation Hangars & Arenas",
-      desc: "Wide-span structures offering obstruction-free interior spaces for aircraft hangars, sports arenas, and exhibition halls.",
-      features: ["Spans Exceeding 90 Meters", "Heavy Roof Load Support", "Integrated Crane Beams"]
-    }
-  ],
   components: [
     {
       icon: "🔩",
@@ -44,29 +21,6 @@ const servicesData = {
       title: "Roof & Wall Claddings",
       desc: "Color-coated Galvalume and Galvanized panels in multiple profiles, offering ultimate weather-proofing and modern aesthetics.",
       features: ["AZ150 Galvalume Layer", "Standard Color Choices", "Thermal Insulation Compatibility"]
-    }
-  ],
-  cnc: [
-    {
-      icon: "🎯",
-      image: "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80",
-      title: "Precision Fiber Laser Cutting",
-      desc: "High-speed, sub-millimeter precision laser profiling of carbon steel, stainless steel, and aluminum plates.",
-      features: ["Negligible Heat Distortion", "Intricate Geometry Cutting", "Plate Thicknesses Up to 25mm"]
-    },
-    {
-      icon: "⚙️",
-      image: "https://images.unsplash.com/photo-1537462715879-360eeb61a0bc?auto=format&fit=crop&w=800&q=80",
-      title: "CNC Machining & Tooling",
-      desc: "In-house CNC milling, turning, and surface grinding jobs tailored to client specifications for mechanical and industrial equipment.",
-      features: ["High Dimensional Tolerance", "Batch Production Capability", "Detailed Quality Control Reports"]
-    },
-    {
-      icon: "🔥",
-      image: "https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=800&q=80",
-      title: "Heavy Casting & Wear Parts",
-      desc: "Production of specialized casting elements and wear-resistant machinery parts for mining, manufacturing, and cement sectors.",
-      features: ["Alloy Steel Castings", "Hardened Surface Layers", "Custom Blueprint Casting"]
     }
   ],
   infra: [
@@ -162,7 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initEstimator();
   initEstimator3D();
   initStatsCounters();
-  initBusinessCardFlip();
   initContactForm();
 });
 
@@ -386,7 +339,7 @@ function initServicesTabs() {
   });
 
   // Init default cards
-  renderServiceCards("peb");
+  renderServiceCards("construction");
 }
 
 function renderServiceCards(category) {
@@ -736,16 +689,6 @@ function initStatsCounters() {
   observer.observe(statsSection);
 }
 
-// --- Interactive 3D Business Card Flip ---
-function initBusinessCardFlip() {
-  const card = document.getElementById("business-card");
-  const cardInner = document.getElementById("card-inner");
-  if (!card || !cardInner) return;
-
-  card.addEventListener("click", () => {
-    cardInner.classList.toggle("flipped");
-  });
-}
 
 // --- Contact Form Submission ---
 function initContactForm() {
