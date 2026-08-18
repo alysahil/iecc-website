@@ -188,8 +188,28 @@ a {
   color: var(--color-navy);
 }
 
-.logo span {
-  color: var(--color-maroon);
+.logo-svg {
+  width: 100px;
+  height: 44px;
+  display: block;
+}
+
+.logo-navy-part {
+  fill: var(--color-navy);
+  transition: fill 0.3s ease;
+}
+
+.logo-maroon-part {
+  fill: var(--color-maroon);
+  transition: fill 0.3s ease;
+}
+
+.logo-light .logo-navy-part {
+  fill: #FFF;
+}
+
+.logo-light .logo-maroon-part {
+  fill: var(--color-maroon);
 }
 
 .logo-dot {

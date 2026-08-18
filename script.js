@@ -3,21 +3,21 @@ const servicesData = {
   components: [
     {
       icon: "🔩",
-      image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
+      image: "assets/primary_frames.jpg",
       title: "Primary Frame Members",
       desc: "Built-up H-beams, tapered columns, and roof rafters fabricated from high-strength ASTM steel to withstand heavy gravity and wind loads.",
       features: ["ASTM 572M Sourced Steel", "AWS D1.1 Welding Integrity", "Deep Rust-Resistant Coatings"]
     },
     {
       icon: "📏",
-      image: "https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?auto=format&fit=crop&w=800&q=80",
+      image: "assets/purlins.jpg",
       title: "Secondary Z & C Purlins",
       desc: "Precision roll-formed cold steel purlins, girts, and eave struts providing lightweight, high-strength support for building envelopes.",
       features: ["Uniform Dimensions", "Pre-Punched Bolt Holes", "High Zinc Coating Protection"]
     },
     {
       icon: "🎨",
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+      image: "assets/claddings.jpg",
       title: "Roof & Wall Claddings",
       desc: "Color-coated Galvalume and Galvanized panels in multiple profiles, offering ultimate weather-proofing and modern aesthetics.",
       features: ["AZ150 Galvalume Layer", "Standard Color Choices", "Thermal Insulation Compatibility"]
@@ -26,21 +26,21 @@ const servicesData = {
   infra: [
     {
       icon: "🚧",
-      image: "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=800&q=80",
+      image: "assets/guardrails.jpg",
       title: "Highway Guardrails",
       desc: "W-Beam and Thrie-Beam crash barriers manufactured using hot-dip galvanized steel, conforming to international safety standards.",
       features: ["High Impact Absorption", "Hot-Dip Galvanized Coating", "Standard Mounting Brackets"]
     },
     {
       icon: "🕸️",
-      image: "https://images.unsplash.com/photo-1508849789987-4e5333c12b78?auto=format&fit=crop&w=800&q=80",
+      image: "assets/security_fence.jpg",
       title: "Security Fencing & Mesh",
       desc: "Chain-link fences, welded mesh panels, and gabion baskets for site boundary enclosure, security, and soil stabilization.",
       features: ["Heavy Galvanized Wire", "PVC Anti-UV Coatings Available", "Anti-Climb Rigid Mesh Options"]
     },
     {
       icon: "💨",
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+      image: "assets/industrial_ducts.jpg",
       title: "Heavy Industrial Ducts",
       desc: "Custom design and fabrication of heavy steel ducts, ventilation channels, pipe supports, and plant structural accessories.",
       features: ["Airflow Optimization Detailing", "Vibration-Resistant Frames", "On-site Installation Support"]
@@ -49,21 +49,21 @@ const servicesData = {
   construction: [
     {
       icon: "🧱",
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80",
+      image: "assets/civil_concrete.jpg",
       title: "Civil & Structural Concrete",
       desc: "Heavy foundations, concrete plinths, machinery bases, and structural reinforced concrete frames engineered for heavy loading.",
       features: ["High-Strength Concrete Mixes", "Seismic-Compliant Foundation Plinths", "In-house Concrete Lab Inspection"]
     },
     {
       icon: "🏢",
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+      image: "assets/commercial_building.jpg",
       title: "Commercial & Turnkey Buildings",
       desc: "Fast-track, turnkey construction of corporate office blocks, commercial showrooms, retail centers, and multi-story structural layouts.",
       features: ["Integrated MEP Design", "Optimized Construction Timelines", "Premium Grade Quality Finishing"]
     },
     {
       icon: "🏭",
-      image: "https://images.unsplash.com/photo-1581094288338-2314dddb7ecc?auto=format&fit=crop&w=800&q=80",
+      image: "assets/plant_commissioning.jpg",
       title: "Industrial Plant Commissioning",
       desc: "Full-scale structural erection, machinery foundation works, heavy plant rigging, industrial pipe fitting, and structural commissioning.",
       features: ["Certified Heavy Lift Planning", "AWS/ASME Welding Certification", "Rigorous Safety Compliance (OSHA)"]
