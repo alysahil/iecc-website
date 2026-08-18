@@ -49,14 +49,14 @@ const servicesData = {
   construction: [
     {
       icon: "🧱",
-      image: "assets/civil_concrete.jpg",
+      image: "assets/construction_site_3.jpg",
       title: "Civil & Structural Concrete",
       desc: "Heavy foundations, concrete plinths, machinery bases, and structural reinforced concrete frames engineered for heavy loading.",
       features: ["High-Strength Concrete Mixes", "Seismic-Compliant Foundation Plinths", "In-house Concrete Lab Inspection"]
     },
     {
       icon: "🏢",
-      image: "assets/commercial_building.jpg",
+      image: "assets/construction_site_2.jpg",
       title: "Commercial & Turnkey Buildings",
       desc: "Fast-track, turnkey construction of corporate office blocks, commercial showrooms, retail centers, and multi-story structural layouts.",
       features: ["Integrated MEP Design", "Optimized Construction Timelines", "Premium Grade Quality Finishing"]
