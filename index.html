@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IECC | Indian Engineering & Construction Company</title>
+  <meta name="description" content="IECC (Indian Engineering & Construction Company) provides industry-leading Pre-Engineered Buildings, heavy steel structures, CNC cutting, and infrastructure solutions.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- --- Header / Navigation --- -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" style="display: flex; align-items: center; gap: 0.8rem;">
+        <svg class="logo-svg" viewBox="0 0 135 60" xmlns="http://www.w3.org/2000/svg">
+          <rect class="logo-navy-part" x="10" y="10" width="12" height="40" rx="1.5"/>
+          <path class="logo-navy-part" d="M 32,10 H 56 V 18 H 42 V 26 H 54 V 34 H 42 V 42 H 56 V 50 H 32 Z"/>
+          <rect class="logo-maroon-part" x="42" y="26" width="12" height="8"/>
+          <path class="logo-navy-part" d="M 88,10 H 68 C 62,10 58,14 58,20 V 40 C 58,46 62,50 68,50 H 88 V 42 H 68 V 18 H 88 Z"/>
+          <path class="logo-maroon-part" d="M 84,42 H 88 V 50 H 84 Z"/>
+          <path class="logo-maroon-part" d="M 84,10 H 88 V 18 H 84 Z"/>
+          <path class="logo-navy-part" d="M 122,10 H 102 C 96,10 92,14 92,20 V 40 C 92,46 96,50 102,50 H 122 V 42 H 102 V 18 H 122 Z"/>
+          <path class="logo-maroon-part" d="M 118,42 H 122 V 50 H 118 Z"/>
+          <path class="logo-maroon-part" d="M 118,10 H 122 V 18 H 118 Z"/>
+        </svg>
+        <span style="display: flex; flex-direction: column; line-height: 1;">
+          <span style="font-size: 1.35rem; font-weight: 800; color: var(--color-navy); letter-spacing: -0.02em;">IECC</span>
+          <span style="font-size: 0.55rem; font-weight: 700; color: var(--color-maroon); letter-spacing: 0.05em; text-transform: uppercase;">Engineering & Construction</span>
+        </span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#diagram">Structure Guide</a></li>
+        <li><a href="#estimator">Cost Estimator</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#estimator" class="btn btn-secondary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">Get a Quote</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- --- Hero Section --- -->
+  <section class="hero" id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-gradient-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">ISO 9001:2015 Certified Contractor</div>
+        <h1 class="hero-title">
+          <span>Engineering the Future.</span>
+          <span class="text-gradient">Constructing Trust.</span>
+        </h1>
+        <p class="hero-desc">
+          IECC (Indian Engineering & Construction Company) designs, fabricates, and installs high-strength Pre-Engineered Buildings (PEBs), structural steel infrastructure, and precision engineered components across India and global markets.
+        </p>
+        <div class="hero-actions">
+          <a href="#estimator" class="btn btn-primary">Start Cost Estimate</a>
+          <a href="#services" class="btn btn-secondary">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-showcase">
+        <div class="showcase-card">
+          <span class="showcase-tag">Next-Gen Infrastructure</span>
+          <h3 class="showcase-heading">Industrial PEB Warehouses</h3>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 1.5rem;">
+            Turnkey architectural design-to-installation workflow utilizing automated welding and heavy steel fabrication technologies.
+          </p>
+          <div class="showcase-stats">
+            <div class="stat-item">
+              <h4 id="hero-stat-1">80K+</h4>
+              <p>MT / Year</p>
+            </div>
+            <div class="stat-item">
+              <h4 id="hero-stat-2">600K</h4>
+              <p>Sq.Ft Area</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Services Hub Section --- -->
+  <section class="section-padding" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">What We Do</span>
+        <h2 class="section-title">Engineered Solutions for Complex Infrastructure</h2>
+      </div>
+
+      <div class="services-tabs-container">
+        <button class="tab-btn active" data-tab="peb">PEB & Warehouses</button>
+        <button class="tab-btn" data-tab="components">Building Components</button>
+        <button class="tab-btn" data-tab="cnc">Precision CNC & Cutting</button>
+        <button class="tab-btn" data-tab="infra">Infrastructure & Security</button>
+        <button class="tab-btn" data-tab="construction">Construction & Civil</button>
+      </div>
+
+      <div class="services-grid" id="services-grid">
+        <!-- Dynamic Cards are injected by JS based on selection -->
+        <div class="service-card">
+          <div class="service-icon">🏗️</div>
+          <h3>Pre-Engineered Buildings</h3>
+          <p>Complete turnkey solutions from architectural concept and engineering design to fabrication, transport, and on-site erection.</p>
+          <ul class="service-features-list">
+            <li>Turnkey Warehouse Construction</li>
+            <li>Multi-Story Pre-fabricated Offices</li>
+            <li>Agricultural Sheds & Aviation Hangars</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Advanced Engineering</h3>
+          <p>Using industry leading software (STAAD Pro, Tekla, MBS) for highly optimized structural steel layouts conforming to AISC codes.</p>
+          <ul class="service-features-list">
+            <li>Earthquake Resistant Analysis</li>
+            <li>Optimized Weight Distributions</li>
+            <li>Custom Detailing Packages</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3>Quality Manufacturing</h3>
+          <p>State-of-the-art facilities utilizing premium grade ASTM 572M steel and AWS D1.1-compliant structural welds.</p>
+          <ul class="service-features-list">
+            <li>MBMA, AISC & IS Compliant</li>
+            <li>Ultrasonic Weld Inspections</li>
+            <li>Anti-Corrosive Epoxy Coatings</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Interactive Structural Diagram --- -->
+  <section class="section-padding" id="diagram" style="background: var(--bg-primary); border-top: 1px solid var(--border-glass);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">PEB Anatomy Guide</span>
+        <h2 class="section-title">Interactive Component Showcase</h2>
+      </div>
+
+      <div class="diagram-layout">
+        <div class="diagram-viewer" style="position: relative; padding: 0.5rem; background: var(--bg-glass); border: 1px solid var(--border-glass); border-radius: 20px;">
+          <img src="assets/peb_diagram_cleaned.jpg" alt="IECC PEB Structure Anatomy" style="width: 100%; height: auto; display: block; border-radius: 14px;">
+          
+          <!-- HOTSPOT 1: Primary Column / Rafter Frame -->
+          <div class="hotspot-node" data-component="primary-frame" style="left: 81%; top: 35%;">
+            <span class="hotspot-glow"></span>
+            <span class="hotspot-dot"></span>
+          </div>
+
+          <!-- HOTSPOT 2: Purlins (Secondary Members) -->
+          <div class="hotspot-node" data-component="purlins" style="left: 74%; top: 31%;">
+            <span class="hotspot-glow"></span>
+            <span class="hotspot-dot"></span>
+          </div>
+
+          <!-- HOTSPOT 3: Sheeting & Insulation -->
+          <div class="hotspot-node" data-component="sheeting" style="left: 11%; top: 32%;">
+            <span class="hotspot-glow"></span>
+            <span class="hotspot-dot"></span>
+          </div>
+
+          <!-- HOTSPOT 4: Mezzanine Floor System -->
+          <div class="hotspot-node" data-component="mezzanine" style="left: 48%; top: 33%;">
+            <span class="hotspot-glow"></span>
+            <span class="hotspot-dot"></span>
+          </div>
+        </div>
+
+        <div class="diagram-info-panel">
+          <div class="info-card" id="diagram-info-card">
+            <div class="info-card-default" id="info-default-msg">
+              <p>Hover or tap on the glowing hotspots of the building structure to explore component specifications and fabrication details.</p>
+            </div>
+            <div class="info-card-content" id="info-content-box" style="display: none;">
+              <h3 id="info-title">Primary Framing Columns <span class="badge badge-primary" id="info-badge">Primary</span></h3>
+              <p id="info-desc">Heavy load-bearing columns and rafters constructed from high-tensile steel plates welded together to form rigid 'I' frames, ensuring maximum span capacity.</p>
+              <div class="info-specs" style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; border-top: 1px solid var(--border-glass); padding-top: 1.2rem;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;"><span style="color: var(--text-secondary);">Model Profile:</span><span style="color: var(--color-maroon); font-weight: 600;" id="info-model">-</span></div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;"><span style="color: var(--text-secondary);">Material Standard:</span><span style="color: var(--text-primary); font-weight: 600;" id="info-material">-</span></div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;"><span style="color: var(--text-secondary);">Standard Dimensions:</span><span style="color: var(--text-primary); font-weight: 600;" id="info-dims">-</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Gallery Section --- -->
+  <section class="section-padding" id="gallery" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Real Warehouses & Materials</span>
+        <h2 class="section-title">Visualizing Construction Quality</h2>
+      </div>
+      <div class="gallery-grid">
+        <!-- Card 1: Warehouse Exterior -->
+        <div class="gallery-card">
+          <div style="height: 250px; overflow: hidden;">
+            <img src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?auto=format&fit=crop&w=800&q=80" alt="PEB Warehouse Exterior">
+          </div>
+          <div style="padding: 1.5rem;">
+            <span style="color: var(--color-maroon); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Completed Project</span>
+            <h3 style="font-size: 1.2rem; color: var(--color-navy-dark); margin-bottom: 0.5rem;">Pre-Engineered Logistics Center</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Modern PEB warehouse exterior constructed with high-durability insulated sandwich panels.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Excavation & Foundation -->
+        <div class="gallery-card">
+          <div style="height: 250px; overflow: hidden;">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="Excavator Civil Foundation Site">
+          </div>
+          <div style="padding: 1.5rem;">
+            <span style="color: var(--color-maroon); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Civil Works</span>
+            <h3 style="font-size: 1.2rem; color: var(--color-navy-dark); margin-bottom: 0.5rem;">Foundation Excavation</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Heavy excavation, earthwork, and sub-grade compaction for industrial clear-span warehousing.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Construction Frame -->
+        <div class="gallery-card">
+          <div style="height: 250px; overflow: hidden;">
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="Steel Structure Construction">
+          </div>
+          <div style="padding: 1.5rem;">
+            <span style="color: var(--color-maroon); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Erection Phase</span>
+            <h3 style="font-size: 1.2rem; color: var(--color-navy-dark); margin-bottom: 0.5rem;">Primary Structural Framing</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Erection of heavy built-up columns and rafters forming the solid foundation of an industrial shed.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Warehouse Interior -->
+        <div class="gallery-card">
+          <div style="height: 250px; overflow: hidden;">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Warehouse Interior">
+          </div>
+          <div style="padding: 1.5rem;">
+            <span style="color: var(--color-maroon); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Completed Project</span>
+            <h3 style="font-size: 1.2rem; color: var(--color-navy-dark); margin-bottom: 0.5rem;">Clear-Span Interior Storage</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Completed warehouse interior showing high overhead clearance and optimized storage space.</p>
+          </div>
+        </div>
+
+        <!-- Card 5: Reinforced Concrete -->
+        <div class="gallery-card">
+          <div style="height: 250px; overflow: hidden;">
+            <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=800&q=80" alt="Rebar Concrete Foundation">
+          </div>
+          <div style="padding: 1.5rem;">
+            <span style="color: var(--color-maroon); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Civil Works</span>
+            <h3 style="font-size: 1.2rem; color: var(--color-navy-dark); margin-bottom: 0.5rem;">Reinforced Foundation Plinths</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Precision reinforced steel rebar cage setting and high-load concrete pouring for heavy plant setups.</p>
+          </div>
+        </div>
+
+        <!-- Card 6: Steel Manufacturing -->
+        <div class="gallery-card">
+          <div style="height: 250px; overflow: hidden;">
+            <img src="https://images.unsplash.com/photo-1523431130350-3188e7d98edf?auto=format&fit=crop&w=800&q=80" alt="Heavy Metal Fabrication">
+          </div>
+          <div style="padding: 1.5rem;">
+            <span style="color: var(--color-navy); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">Fabrication Shop</span>
+            <h3 style="font-size: 1.2rem; color: var(--color-navy-dark); margin-bottom: 0.5rem;">Heavy Structural Fabrication</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">Automatic SAW welding and assembly line for custom built-up structural rafters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Cost Estimator Widget Section --- -->
+  <section class="section-padding" id="estimator" style="background: var(--bg-primary); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Infrastructure Modeler</span>
+        <h2 class="section-title">Estimate Project Timeline & Specs</h2>
+      </div>
+
+      <div class="estimator-layout">
+        <div class="estimator-form">
+          <div class="form-group">
+            <label for="slider-area">Building Footprint Area: <span id="area-val">15,000</span> Sq.Ft</label>
+            <input type="range" id="slider-area" class="range-slider" min="5000" max="150000" step="2500" value="15000">
+          </div>
+
+          <div class="form-group">
+            <label for="slider-height">Clear Building Height: <span id="height-val">8</span> Meters</label>
+            <input type="range" id="slider-height" class="range-slider" min="5" max="16" step="1" value="8">
+          </div>
+
+          <div class="form-group">
+            <label>Material & Engineering Standard</label>
+            <div class="option-selector" id="material-selector">
+              <div class="option-box active" data-factor="1.0" data-label="Standard">
+                <h4>Standard IS/ASTM</h4>
+                <p>Standard Industrial Grade</p>
+              </div>
+              <div class="option-box" data-factor="1.25" data-label="Premium Heavy Duty">
+                <h4>Premium Heavy-Duty</h4>
+                <p>Anti-Seismic & Thick Purlins</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Additional Accessories Package</label>
+            <div class="option-selector" id="accessory-selector">
+              <div class="option-box active" data-cost="0" data-label="Basic Accessories">
+                <h4>Basic Package</h4>
+                <p>Roof & Wall panels only</p>
+              </div>
+              <div class="option-box" data-cost="150000" data-label="Full Turnkey Package">
+                <h4>Full Turnkey Package</h4>
+                <p>Canopies, Crane Beams, Mezzanine</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="estimator-result">
+          <div class="result-header">
+            <h3>Project Timeline & Specs</h3>
+            <p>Dynamic structural preview and schedule details</p>
+          </div>
+          <canvas id="estimator-3d-canvas" style="width: 100%; height: 200px; display: block; border-radius: 16px; background: rgba(11, 44, 92, 0.01); border: 1px solid var(--border-glass); margin: 1.5rem 0;"></canvas>
+          <div style="margin-bottom: 1.5rem; text-align: center;">
+            <div id="timeline-output" style="font-size: 1.5rem; font-weight: 800; color: var(--color-maroon); font-family: 'Outfit', sans-serif;">Estimated Timeline: 8 - 10 Weeks</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem;">Erection & Completion Schedule</div>
+          </div>
+          <div class="result-details">
+            <div class="detail-row">
+              <span>Estimated Steel Weight:</span>
+              <span id="weight-output">45 Metric Tonnes</span>
+            </div>
+            <div class="detail-row">
+              <span>Primary Framings:</span>
+              <span>Welded Plate I-Sections</span>
+            </div>
+            <div class="detail-row">
+              <span>Cladding Protection:</span>
+              <span>AZ150 Galvalume / Color Coated</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary" style="margin-top: 1.5rem;">Confirm & Submit Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Stats Section --- -->
+  <section class="stats-banner">
+    <div class="container stats-grid">
+      <div class="stat-number-box">
+        <div class="stat-number" data-target="15">0<span>+</span></div>
+        <div class="stat-label">Years Construction Experience</div>
+      </div>
+      <div class="stat-number-box">
+        <div class="stat-number" data-target="600000">0<span>+</span></div>
+        <div class="stat-label">Square Feet Manufacturing Area</div>
+      </div>
+      <div class="stat-number-box">
+        <div class="stat-number" data-target="80000">0<span>+</span></div>
+        <div class="stat-label">Metric Tonnes Annual Capacity</div>
+      </div>
+      <div class="stat-number-box">
+        <div class="stat-number" data-target="500">0<span>+</span></div>
+        <div class="stat-label">Projects Executed Globally</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Contact Section --- -->
+  <section class="section-padding" id="contact" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Get In Touch</span>
+        <h2 class="section-title">Initiate Your Infrastructure Plan</h2>
+      </div>
+
+      <div class="contact-layout">
+        <!-- 3D Business Card Presentation -->
+        <div style="display: flex; flex-direction: column; gap: 1.5rem; align-items: center;">
+          <div class="card-container" id="business-card">
+            <div class="card-inner" id="card-inner">
+              
+              <!-- Card FRONT -->
+              <div class="card-face card-front">
+                <div class="card-logo-area">
+                  <svg class="logo-svg" viewBox="0 0 135 60" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="logo-navy-part" x="10" y="10" width="12" height="40" rx="1.5"/>
+                    <path class="logo-navy-part" d="M 32,10 H 56 V 18 H 42 V 26 H 54 V 34 H 42 V 42 H 56 V 50 H 32 Z"/>
+                    <rect class="logo-maroon-part" x="42" y="26" width="12" height="8"/>
+                    <path class="logo-navy-part" d="M 88,10 H 68 C 62,10 58,14 58,20 V 40 C 58,46 62,50 68,50 H 88 V 42 H 68 V 18 H 88 Z"/>
+                    <path class="logo-maroon-part" d="M 84,42 H 88 V 50 H 84 Z"/>
+                    <path class="logo-maroon-part" d="M 84,10 H 88 V 18 H 84 Z"/>
+                    <path class="logo-navy-part" d="M 122,10 H 102 C 96,10 92,14 92,20 V 40 C 92,46 96,50 102,50 H 122 V 42 H 102 V 18 H 122 Z"/>
+                    <path class="logo-maroon-part" d="M 118,42 H 122 V 50 H 118 Z"/>
+                    <path class="logo-maroon-part" d="M 118,10 H 122 V 18 H 118 Z"/>
+                  </svg>
+                  <span class="card-brand-sub">INDIAN ENGINEERING &amp;<br>CONSTRUCTION COMPANY</span>
+                </div>
+                <div class="card-separator"></div>
+                <div class="card-info-area">
+                  <h3 class="card-name">BELAL AHMAD</h3>
+                  <span class="card-title">CEO</span>
+                  <div class="card-contact-lines">
+                    <div class="card-contact-line">
+                      <div class="card-icon-circle">📞</div>
+                      <span>+91-9897947864</span>
+                    </div>
+                    <div class="card-contact-line">
+                      <div class="card-icon-circle">✉️</div>
+                      <span>business@iecc.co.in</span>
+                    </div>
+                    <div class="card-contact-line">
+                      <div class="card-icon-circle">🌐</div>
+                      <span>www.iecc.co.in</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Card BACK -->
+              <div class="card-face card-back">
+                <div class="card-back-left">
+                  <div class="card-back-left-content">
+                    <svg class="logo-svg logo-light" viewBox="0 0 135 60" xmlns="http://www.w3.org/2000/svg">
+                      <rect class="logo-navy-part" x="10" y="10" width="12" height="40" rx="1.5"/>
+                      <path class="logo-navy-part" d="M 32,10 H 56 V 18 H 42 V 26 H 54 V 34 H 42 V 42 H 56 V 50 H 32 Z"/>
+                      <rect class="logo-maroon-part" x="42" y="26" width="12" height="8"/>
+                      <path class="logo-navy-part" d="M 88,10 H 68 C 62,10 58,14 58,20 V 40 C 58,46 62,50 68,50 H 88 V 42 H 68 V 18 H 88 Z"/>
+                      <path class="logo-maroon-part" d="M 84,42 H 88 V 50 H 84 Z"/>
+                      <path class="logo-maroon-part" d="M 84,10 H 88 V 18 H 84 Z"/>
+                      <path class="logo-navy-part" d="M 122,10 H 102 C 96,10 92,14 92,20 V 40 C 92,46 96,50 102,50 H 122 V 42 H 102 V 18 H 122 Z"/>
+                      <path class="logo-maroon-part" d="M 118,42 H 122 V 50 H 118 Z"/>
+                      <path class="logo-maroon-part" d="M 118,10 H 122 V 18 H 118 Z"/>
+                    </svg>
+                    <span class="card-brand-sub">INDIAN ENGINEERING &amp;<br>CONSTRUCTION COMPANY</span>
+                  </div>
+                </div>
+                <div class="card-back-right">
+                  <div class="card-address-block">
+                    <div class="card-address-item">
+                      <div class="card-icon-circle">📍</div>
+                      <div>
+                        <div class="card-address-label">ADDRESS</div>
+                        <div class="card-address-desc">Levana Cyber Heights, 10th floor, TCG 2,5, Vibhuti Khand, Gomti Nagar, Lucknow (U.P.)</div>
+                      </div>
+                    </div>
+                    <div class="card-address-item">
+                      <div class="card-icon-circle">📞</div>
+                      <div>
+                        <div class="card-address-label">PHONE</div>
+                        <div class="card-address-desc">+91-9897947864</div>
+                      </div>
+                    </div>
+                    <div class="card-address-item">
+                      <div class="card-icon-circle">✉️</div>
+                      <div>
+                        <div class="card-address-label">EMAIL</div>
+                        <div class="card-address-desc">business@iecc.co.in</div>
+                      </div>
+                    </div>
+                    <div class="card-address-item">
+                      <div class="card-icon-circle">🌐</div>
+                      <div>
+                        <div class="card-address-label">WEBSITE</div>
+                        <div class="card-address-desc">www.iecc.co.in</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); text-align: center; max-width: 320px; font-style: italic;">
+            * Click the business card to interactively flip between Front and Back.
+          </p>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="input-group">
+              <input type="text" id="contact-name" class="form-input" placeholder=" " required>
+              <label for="contact-name">Full Name</label>
+            </div>
+            <div class="input-group">
+              <input type="email" id="contact-email" class="form-input" placeholder=" " required>
+              <label for="contact-email">Email Address</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-group">
+              <input type="tel" id="contact-phone" class="form-input" placeholder=" " required>
+              <label for="contact-phone">Phone Number</label>
+            </div>
+            <div class="input-group">
+              <input type="text" id="contact-company" class="form-input" placeholder=" ">
+              <label for="contact-company">Company Name</label>
+            </div>
+          </div>
+          <div class="input-group">
+            <textarea id="contact-message" class="form-input" placeholder=" " required></textarea>
+            <label for="contact-message">Outline Your Project Requirements</label>
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn">Submit Engineering Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Footer --- -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="logo" style="display: flex; align-items: center; gap: 0.8rem;">
+            <svg class="logo-svg logo-light" viewBox="0 0 135 60" xmlns="http://www.w3.org/2000/svg">
+              <rect class="logo-navy-part" x="10" y="10" width="12" height="40" rx="1.5"/>
+              <path class="logo-navy-part" d="M 32,10 H 56 V 18 H 42 V 26 H 54 V 34 H 42 V 42 H 56 V 50 H 32 Z"/>
+              <rect class="logo-maroon-part" x="42" y="26" width="12" height="8"/>
+              <path class="logo-navy-part" d="M 88,10 H 68 C 62,10 58,14 58,20 V 40 C 58,46 62,50 68,50 H 88 V 42 H 68 V 18 H 88 Z"/>
+              <path class="logo-maroon-part" d="M 84,42 H 88 V 50 H 84 Z"/>
+              <path class="logo-maroon-part" d="M 84,10 H 88 V 18 H 84 Z"/>
+              <path class="logo-navy-part" d="M 122,10 H 102 C 96,10 92,14 92,20 V 40 C 92,46 96,50 102,50 H 122 V 42 H 102 V 18 H 122 Z"/>
+              <path class="logo-maroon-part" d="M 118,42 H 122 V 50 H 118 Z"/>
+              <path class="logo-maroon-part" d="M 118,10 H 122 V 18 H 118 Z"/>
+            </svg>
+            <span style="display: flex; flex-direction: column; line-height: 1;">
+              <span style="font-size: 1.35rem; font-weight: 800; color: #FFF; letter-spacing: -0.02em;">IECC</span>
+              <span style="font-size: 0.55rem; font-weight: 700; color: var(--color-maroon); letter-spacing: 0.05em; text-transform: uppercase;">Engineering &amp; Construction</span>
+            </span>
+          </a>
+          <p>Providing high-end Pre-Engineered Building solutions, structural steel fabrication, precision laser-cutting, and safety fencing across the globe.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Core Expertise</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Pre-Engineered Buildings</a></li>
+            <li><a href="#services">Structural Steel Components</a></li>
+            <li><a href="#services">Laser Cutting &amp; Machining</a></li>
+            <li><a href="#services">Security Infrastructure</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#diagram">Anatomy Guide</a></li>
+            <li><a href="#estimator">Real-Time Estimator</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Certifications</h4>
+          <ul class="footer-links" style="color: #94A3B8; font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li>✓ ISO 9001:2015 Registered</li>
+            <li>✓ AWS D1.1 Structural Welding</li>
+            <li>✓ ASTM 572M Sourced Materials</li>
+            <li>✓ MBMA Standard Designs</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 IECC (Indian Engineering &amp; Construction Company). All Rights Reserved. (iecc.co.in)</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

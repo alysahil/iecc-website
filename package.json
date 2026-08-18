@@ -1,0 +1,16 @@
+{
+  "name": "iecc-website",
+  "version": "1.0.0",
+  "description": "IECC Corporate Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server ./ -p 5173"
+  },
+  "keywords": [
+    "iecc",
+    "peb",
+    "engineering"
+  ],
+  "author": "Antigravity",
+  "license": "ISC"
+}
