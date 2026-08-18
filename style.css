@@ -6,8 +6,8 @@
   --color-navy: #0b2c5c;
   --color-navy-light: #163f78;
   --color-navy-dark: #061730;
-  --color-maroon: #8b0d1e;
-  --color-maroon-hover: #a21a2c;
+  --color-maroon: #808080;
+  --color-maroon-hover: #686868;
   
   --bg-primary: #F8FAFC;
   --bg-secondary: #FFFFFF;
@@ -19,7 +19,7 @@
   /* Brand Gradients */
   --gradient-brand: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 50%, var(--color-maroon) 100%);
   --gradient-text: linear-gradient(135deg, var(--color-navy-dark) 30%, var(--color-navy) 100%);
-  --gradient-glow: linear-gradient(135deg, rgba(11, 44, 92, 0.03) 0%, rgba(139, 13, 30, 0.03) 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(11, 44, 92, 0.03) 0%, rgba(128, 128, 128, 0.03) 100%);
   
   /* Transitions */
   --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -147,8 +147,8 @@ a {
 
 .btn-secondary:hover {
   border-color: var(--color-maroon);
-  background: rgba(139, 13, 30, 0.05);
-  box-shadow: 0 10px 20px rgba(139, 13, 30, 0.1);
+  background: rgba(128, 128, 128, 0.05);
+  box-shadow: 0 10px 20px rgba(128, 128, 128, 0.1);
   transform: translateY(-2px);
 }
 
@@ -299,7 +299,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 85% 20%, rgba(139, 13, 30, 0.06) 0%, transparent 50%),
+  background: radial-gradient(circle at 85% 20%, rgba(128, 128, 128, 0.06) 0%, transparent 50%),
               radial-gradient(circle at 15% 85%, rgba(11, 44, 92, 0.06) 0%, transparent 50%);
   z-index: 1;
 }
@@ -394,7 +394,7 @@ a {
   inset: -1px;
   border-radius: 20px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(11, 44, 92, 0.3) 0%, transparent 60%, rgba(139, 13, 30, 0.3) 100%);
+  background: linear-gradient(135deg, rgba(11, 44, 92, 0.3) 0%, transparent 60%, rgba(128, 128, 128, 0.3) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -702,9 +702,9 @@ a {
 }
 
 .badge-secondary {
-  background: rgba(139, 13, 30, 0.08);
+  background: rgba(128, 128, 128, 0.08);
   color: var(--color-maroon);
-  border: 1px solid rgba(139, 13, 30, 0.15);
+  border: 1px solid rgba(128, 128, 128, 0.15);
 }
 
 .info-card-content p {
@@ -777,7 +777,7 @@ a {
 .range-slider::-webkit-slider-thumb:hover {
   transform: scale(1.2);
   background: var(--color-maroon);
-  box-shadow: 0 0 10px rgba(139, 13, 30, 0.4);
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.4);
 }
 
 /* Select Group */
@@ -818,7 +818,7 @@ a {
 /* Estimator Result Card */
 .estimator-result {
   background: radial-gradient(circle at 100% 0%, rgba(11, 44, 92, 0.04) 0%, transparent 60%),
-              radial-gradient(circle at 0% 100%, rgba(139, 13, 30, 0.04) 0%, transparent 60%),
+              radial-gradient(circle at 0% 100%, rgba(128, 128, 128, 0.04) 0%, transparent 60%),
               var(--bg-glass);
   border: 1px solid var(--border-glass);
   border-radius: 24px;
@@ -880,7 +880,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 80% 80%, rgba(139, 13, 30, 0.15) 0%, transparent 60%);
+  background: radial-gradient(circle at 80% 80%, rgba(128, 128, 128, 0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -1152,7 +1152,7 @@ a {
   gap: 0.6rem;
   font-size: 0.62rem;
   color: var(--text-primary);
-  border-bottom: 0.5px solid rgba(139, 13, 30, 0.15);
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.15);
   padding-bottom: 0.4rem;
 }
 
@@ -1455,7 +1455,7 @@ textarea.form-input {
 .blob-2 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(139, 13, 30, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(128, 128, 128, 0.08) 0%, transparent 70%);
   top: 45%;
   right: -150px;
   animation-delay: -7s;
