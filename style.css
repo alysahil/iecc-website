@@ -574,7 +574,7 @@ a {
 
 .service-card h3 {
   font-size: 1.35rem;
-  color: var(--color-navy-dark);
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
 }
 
@@ -689,7 +689,7 @@ a {
 
 .info-card-content h3 {
   font-size: 1.6rem;
-  color: var(--color-navy-dark);
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
@@ -808,15 +808,20 @@ a {
 
 .option-box.active {
   border-color: var(--color-navy);
-  background: rgba(11, 44, 92, 0.04);
-  color: var(--color-navy-dark);
-  box-shadow: 0 5px 15px rgba(11, 44, 92, 0.03);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
 
 .option-box h4 {
   font-size: 0.95rem;
   margin-bottom: 0.25rem;
-  color: var(--color-navy);
+  color: var(--text-primary);
+  transition: var(--transition-fast);
+}
+
+.option-box.active h4 {
+  color: var(--color-maroon);
 }
 
 .option-box p {
@@ -840,7 +845,7 @@ a {
 
 .result-header h3 {
   font-size: 2rem;
-  color: var(--color-navy-dark);
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
 
@@ -1043,7 +1048,7 @@ a {
 .card-name {
   font-family: 'Outfit', sans-serif;
   font-size: 1.25rem;
-  color: var(--color-navy-dark);
+  color: var(--text-primary);
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 0.1rem;

@@ -443,6 +443,12 @@ function initEstimator() {
   
   const timelineOutput = document.getElementById("timeline-output");
   const weightOutput = document.getElementById("weight-output");
+  
+  const concreteOutput = document.getElementById("concrete-output");
+  const cementOutput = document.getElementById("cement-output");
+  const sandOutput = document.getElementById("sand-output");
+  const gravelOutput = document.getElementById("gravel-output");
+  const rebarOutput = document.getElementById("rebar-output");
 
   if (!sliderArea) return;
 
@@ -493,6 +499,28 @@ function initEstimator() {
 
     timelineOutput.textContent = `Estimated Timeline: ${minWeeks} - ${maxWeeks} Weeks`;
     weightOutput.textContent = `${steelWeightMT} Metric Tonnes`;
+
+    // Civil Calculations
+    // Concrete Volume: Area in Sq.Ft * 0.0929 (Sq.Meters) * average thickness (0.15m) * foundation factor (1.3)
+    const concreteM3 = Math.round(area * 0.0929 * 0.15 * 1.3);
+    
+    // Cement: 8.2 bags per m3 of wet concrete
+    const cementBags = Math.round(concreteM3 * 8.2);
+
+    // Sand: 0.42 m3 per m3 of concrete
+    const sandM3 = Math.round(concreteM3 * 0.42);
+
+    // Aggregate (Gravel): 0.84 m3 per m3 of concrete
+    const gravelM3 = Math.round(concreteM3 * 0.84);
+
+    // Rebar Steel: 2.2 kg per Sq.Ft of building area for foundations + slab
+    const rebarMT = Math.round((area * 2.2) / 1000 * 10) / 10;
+
+    if (concreteOutput) concreteOutput.textContent = `${concreteM3.toLocaleString()} m³`;
+    if (cementOutput) cementOutput.textContent = `${cementBags.toLocaleString()} Bags (50kg)`;
+    if (sandOutput) sandOutput.textContent = `${sandM3.toLocaleString()} m³`;
+    if (gravelOutput) gravelOutput.textContent = `${gravelM3.toLocaleString()} m³`;
+    if (rebarOutput) rebarOutput.textContent = `${rebarMT.toLocaleString()} Metric Tonnes`;
   }
 
   // Initial calculation trigger
@@ -605,14 +633,14 @@ function initEstimator3D() {
       ctx.lineTo(projected[idx+3].x, projected[idx+3].y);
       ctx.lineTo(projected[idx+4].x, projected[idx+4].y);
       
-      ctx.strokeStyle = (f === 0 || f === numFrames - 1) ? "#8b0d1e" : "rgba(11, 44, 92, 0.15)";
+      ctx.strokeStyle = (f === 0 || f === numFrames - 1) ? "#cc2929" : "rgba(32, 87, 158, 0.25)";
       ctx.lineWidth = (f === 0 || f === numFrames - 1) ? 2 : 1;
       ctx.stroke();
     }
     
-    // Draw purlins and girts (longitudinal connecting lines) in Navy
+    // Draw purlins and girts (longitudinal connecting lines) in Steel Blue
     ctx.lineWidth = 1;
-    ctx.strokeStyle = "#0b2c5c";
+    ctx.strokeStyle = "rgba(32, 87, 158, 0.55)";
     for (let ptIdx = 0; ptIdx < 5; ptIdx++) {
       ctx.beginPath();
       ctx.moveTo(projected[ptIdx].x, projected[ptIdx].y);
@@ -623,8 +651,8 @@ function initEstimator3D() {
       ctx.stroke();
     }
     
-    // Draw cross bracing at the ends (Maroon)
-    ctx.strokeStyle = "rgba(139, 13, 30, 0.2)";
+    // Draw cross bracing at the ends (Red)
+    ctx.strokeStyle = "rgba(204, 41, 41, 0.4)";
     ctx.beginPath();
     // End wall x-bracing
     ctx.moveTo(projected[0].x, projected[0].y);
